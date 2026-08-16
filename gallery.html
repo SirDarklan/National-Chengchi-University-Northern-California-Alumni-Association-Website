@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NCCU Northern California Alumni Foundation photo gallery page."
+    />
+    <title>Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body class="subpage">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="NCCU-NorCal-AF home"
+        ><img class="brand-logo" src="nccu_logo.svg" alt="" /><span
+          >National Chengchi University<br />Northern California Alumni
+          Foundation
+        </span></a
+      >
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        Menu <span></span>
+      </button>
+      <button
+        class="language-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Switch between English and Chinese"
+      >
+        <span class="language-toggle__option">EN</span>
+        <span class="language-toggle__thumb" aria-hidden="true"></span>
+        <span class="language-toggle__option">中</span>
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Primary navigation">
+        <a href="index.html"
+          ><span class="en">About</span><span class="zh">关于我们</span></a
+        >
+        <a href="events.html"
+          ><span class="en">Events</span><span class="zh">活动</span></a
+        >
+        <a href="team.html"
+          ><span class="en">Meet the Team</span
+          ><span class="zh">认识团队</span></a
+        >
+        <a href="gallery.html" aria-current="page"
+          ><span class="en">Photo Gallery</span
+          ><span class="zh">照片庫</span></a
+        >
+        <!-- <a href="shop.html">Shop</a> -->
+        <a href="#donate" class="nav-cta" data-donate-open
+          ><span class="en">Donate</span><span class="zh">捐錢</span>
+          <span>↗</span></a
+        >
+      </nav>
+    </header>
+
+    <dialog class="donation-dialog" aria-labelledby="donation-title">
+      <div class="donation-dialog__content">
+        <button
+          class="donation-dialog__close"
+          type="button"
+          data-donate-close
+          aria-label="Close donation details"
+        >
+          ×
+        </button>
+        <p class="payment-note">
+          As we do not have an online payment setup, we accept donations through
+          check or wire transfer
+        </p>
+        <h2 id="donation-title">Check</h2>
+        <div class="payment-instructions">
+          <p>
+            <strong>Make checks payable to </strong><br />National Chengchi
+            University Northern California Alumni Foundation <br />or <br />
+            NCCUNCAF
+          </p>
+          <p>
+            <strong>Mailing Address </strong><br />Attn: Wei-Lin Wu <br />
+            NCCUNCAF <br />5255 Stevens Creek Blvd, #126 <br />Santa Clara, CA
+            95051-6664
+          </p>
+        </div>
+        <h2>Wire Transfer</h2>
+        <div class="payment-instructions">
+          <p>Please contact nccuncaf@gmail.com for instructions</p>
+        </div>
+      </div>
+    </dialog>
+
+    <main>
+      <section class="page-hero page-hero-gallery">
+        <div>
+          <h1>
+            <span class="en">Photo Gallery</span
+            ><span class="zh"></span>
+          </h1>
+        </div>
+      </section>
+      <section class="album-bar">
+        <p>
+          <span class="en">Browse the archive</span
+          ><span class="zh"></span>
+        </p>
+        <div>
+          <button class="album-filter active" type="button">
+            <span class="en">All moments</span
+            ><span class="zh"></span>
+          </button>
+          <button class="album-filter" type="button">
+            <span class="en">Gatherings</span
+            ><span class="zh"></span>
+          </button>
+          <button class="album-filter" type="button">
+            <span class="en">Community</span
+            ><span class="zh"></span>
+          </button>
+        </div>
+      </section>
+      <section class="gallery-wall" aria-label="Alumni event photos">
+        <figure class="wall-tall photo-placeholder">
+          <div class="photo-placeholder__art" aria-hidden="true">✦</div>
+          <figcaption>
+            <span class="en">Future event photo</span
+            ><span class="zh"></span>
+          </figcaption>
+        </figure>
+        <figure class="photo-placeholder">
+          <div class="photo-placeholder__art" aria-hidden="true">✦</div>
+          <figcaption>
+            <span class="en">Future event photo</span
+            ><span class="zh"></span>
+          </figcaption>
+        </figure>
+        <figure class="photo-placeholder">
+          <div class="photo-placeholder__art" aria-hidden="true">✦</div>
+          <figcaption>
+            <span class="en">Future event photo</span
+            ><span class="zh"></span>
+          </figcaption>
+        </figure>
+        <figure class="photo-placeholder">
+          <div class="photo-placeholder__art" aria-hidden="true">✦</div>
+          <figcaption>
+            <span class="en">Future event photo</span
+            ><span class="zh"></span>
+          </figcaption>
+        </figure>
+        <figure class="wall-wide photo-placeholder">
+          <div class="photo-placeholder__art" aria-hidden="true">✦</div>
+          <figcaption>
+            <span class="en">Future event photo</span
+            ><span class="zh"></span>
+          </figcaption>
+        </figure>
+        <div class="wall-callout">
+          <span
+            ><span class="en">Photo archive</span
+            ><span class="zh"></span></span
+          >
+          <strong
+            ><span class="en">More moments<br />coming soon.</span
+            ><span class="zh zh-block"
+              ></span
+            ></strong
+          >
+          <a
+            class="gallery-note-link"
+            href="mailto:hello@collegealumnicity.org?subject=Photo%20submission"
+            ><span class="en">Share a photo <span>↗</span></span
+            ><span class="zh"> <span>↗</span></span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-top">
+        <a class="brand brand-footer" href="index.html"
+          ><img class="brand-logo" src="nccu_logo.svg" alt="" /><span
+            >National Chengchi University<br />Northern California Alumni
+            Foundation
+          </span></a
+        >
+      </div>
+      <section class="footer-contact" aria-label="Contact information">
+        <a class="footer-contact__label" href="mailto:nccuncaf@gmail.com"
+          >Contact <span>↗</span></a
+        >
+        <address class="footer-contact__details">
+          nccuncaf@gmail.com<br />5255 Stevens Creek Blvd., #126<br />Santa
+          Clara, CA 95051-6664
+        </address>
+      </section>
+      <div class="footer-bottom">
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      document.querySelectorAll(".album-filter").forEach((button) =>
+        button.addEventListener("click", () => {
+          document
+            .querySelector(".album-filter.active")
+            .classList.remove("active");
+          button.classList.add("active");
+        }),
+      );
+    </script>
+  </body>
+</html>
