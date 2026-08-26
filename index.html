@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A local community for College alumni." />
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <!-- Site header nav bar-->
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="NCCU-NorCal-AF home">
+        <img class="brand-logo" src="nccu_logo.svg" alt="" />
+        <span
+          ><span class="en"
+            >National Chengchi University<br />Northern California Alumni
+            Foundation</span
+          ><span class="zh zh-block">[在此填写中文机构名称]</span></span
+        >
+      </a>
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        Menu <span></span>
+      </button>
+      <button
+        class="language-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Switch between English and Chinese"
+      >
+        <span class="language-toggle__option">EN</span>
+        <span class="language-toggle__thumb" aria-hidden="true"></span>
+        <span class="language-toggle__option">中文</span>
+      </button>
+
+      <!-- Navigation bar -->
+      <nav id="primary-nav" class="nav" aria-label="Primary navigation">
+        <a href="#about"
+          ><span class="en">About</span><span class="zh">关于我们</span></a
+        >
+        <a href="events.html"
+          ><span class="en">Events</span><span class="zh">活动</span></a
+        >
+        <a href="team.html"
+          ><span class="en">Meet the Team</span
+          ><span class="zh">认识团队</span></a
+        >
+        <a href="gallery.html"
+          ><span class="en">Photo Gallery</span
+          ><span class="zh">照片庫</span></a
+        >
+        <!-- <a href="shop.html">Shop</a> -->
+        <a href="#donate" class="nav-cta" data-donate-open
+          ><span class="en">Donate</span><span class="zh">捐錢</span>
+          <span>↗</span></a
+        >
+      </nav>
+    </header>
+
+    <!-- Donation button -->
+    <dialog class="donation-dialog" aria-labelledby="donation-title">
+      <div class="donation-dialog__content">
+        <button
+          class="donation-dialog__close"
+          type="button"
+          data-donate-close
+          aria-label="Close donation details"
+        >
+          ×
+        </button>
+        <p class="payment-note">
+          As we do not have an online payment setup, we accept donations through
+          check or wire transfer
+        </p>
+        <h2 id="donation-title">Check</h2>
+
+        <div class="payment-instructions">
+          <p>
+            <strong>Make checks payable to </strong><br />National Chengchi
+            University Northern California Alumni Foundation <br />
+            or <br />
+            NCCUNCAF
+          </p>
+          <p>
+            <strong>Mailing Address </strong><br />
+            Attn: Wei-Lin Wu <br />
+            NCCUNCAF <br />
+            5255 Stevens Creek Blvd, #126 <br />
+            Santa Clara, CA 95051-6664
+          </p>
+        </div>
+
+        <h2 id="donation-title">Wire Transfer</h2>
+        <div class="payment-instructions">
+          <p>Please contact nccuncaf@gmail.com for instructions</p>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Home Page -->
+    <main>
+      <section class="hero" id="about">
+        <div class="hero-copy">
+          <h1>
+            <span class="en"
+              >National Chengchi University<br />Northern California Alumni
+              Foundation (NCCUNAF)</span
+            >
+            <span class="zh zh-block">國立政治大學北加州校友基金會</span>
+          </h1>
+          <p class="intro">
+            <span class="en"
+              >A home for our newly founded organization <br />
+              Established in May 20, 2026 <br /><span class="address-line"
+                >Address: 5255 Stevens Creek Blvd., #126, Santa Clara, CA
+                95051-6664</span
+              >
+              <br />
+              EIN: 42-2784705 </span
+            ><span class="zh zh-block">[在此填写中文首页介绍]</span>
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#events"
+              ><span class="en">See what’s next</span
+              ><span class="zh">[中文：查看活动]</span> <span>↓</span></a
+            >
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Alumni enjoying an outdoor event">
+          <img src="" alt="" />
+        </div>
+      </section>
+
+      <section class="beliefs">
+        <div class="belief-grid">
+          <h2>
+            <span class="en">About Us</span>
+            <span class="zh">關於本會</span>
+          </h2>
+          <div>
+            <p class="about-description">
+              <span class="en">
+                The National Chengchi University Northern California Alumni
+                Foundation (the "Foundation") is a California nonprofit public
+                benefit corporation organized and operated exclusively for
+                charitable, educational, and cultural purposes under Section
+                501(c)(3) of the Internal Revenue Code. <br />
+                <br />
+                NCCUNCAF serves the public through educational programs and
+                events, cultural exchange activities, lectures, seminars, and
+                community outreach initiatives that benefit students, families,
+                and the broader Northern California community <br />
+                <br />
+                NCCUNCAF was established on May 20, 2026 (The same day as the
+                NCCU's anniversary), by alumni of National Chengchi University
+                (NCCU), a leading university in Taipei, Taiwan, who reside
+                and/or work in Northern California. On August 4, 2026, the
+                foundation received its 501(c)(3) federal tax-exempt status.
+                <br />
+                <br />
+                NCCUNCAF is separate from and independent of the National
+                Chengchi University Alumni Association of Northern California,
+                which operates as a social organization under Section 501(c)(7)
+                of the Internal Revenue Code. Unlike the alumni association, the
+                Foundation operates exclusively for charitable and educational
+                public benefit purposes and does not engage in social club
+                activities.</span
+              >
+              <span class="zh zh-block">
+                國立政治大學北加州校友基金會（NCCUNCAF）或簡稱政大北加校友基金會，是一個加州非營利的公益組織。根據美國國稅局501(c)(3)條款設立並運營，
+                其宗旨為慈善、教育和文化事業。<br />
+                <br />
+                政大北加校友基金會透過教育計畫和活動、文化交流、講座、研討會以及社區拓展活動服務大眾，惠及學生、家庭以及更廣泛的北加州社區。<br />
+                <br />
+                政大北加校友基金會由居住和/或工作於北加州的國立政治大學（台灣一所頂尖大學）校友在2026年5月20日（與母校國立政治大學校慶同日）所創立。
+                本基金會於2026年8月4日取得 501(c)(3) 聯邦免試資格。<br />
+                <br />
+                政大北加校友基金會獨立於國立政治大學北加州校友會，後者根據美國國稅局501(c)(7)條款作為社會組織運作。與校友會不同，
+                基金會的運作宗旨為慈善和教育文化公益事業，不參與任何社交俱樂部活動。
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="events" id="events">
+        <div class="section-head">
+          <div>
+            <h2>
+              <span class="en">Activities, Events, and Programs</span>
+              <span class="zh"></span>
+            </h2>
+            <p class="section-description">
+              <span class="en"
+                >The Foundation brings people together through public learning,
+                cultural exchange, and educational support for students and the
+                Northern California community.</span
+              >
+              <span class="zh zh-block"></span>
+            </p>
+          </div>
+          <a class="button button-light" href="events.html"
+            ><span class="en">Learn more <span>→</span></span
+            ><span class="zh"> <span>→</span></span></a
+          >
+        </div>
+        <div class="home-activities">
+          <article class="home-activity">
+            <h3>
+              <span class="en">Educational Programs and Public Forums</span
+              ><span class="zh"></span>
+            </h3>
+            <p class="section-description">
+              <span class="en"
+                >Our foundation organizes and sponsors educational programs open
+                to the general public including lectures and seminars,
+                professional development workshops, and youth education
+                programs</span
+              ><span class="zh zh-block"></span>
+            </p>
+          </article>
+          <article class="home-activity">
+            <h3>
+              <span class="en">Cultural Exchange and Heritage Programs</span
+              ><span class="zh"></span>
+            </h3>
+            <p class="section-description">
+              <span class="en"
+                >We also organize and sponsor cultural programs that promote
+                understanding of Taiwanese and Chinese culture and foster
+                cross-cultural with the community of Northern California.
+                Activites include various cultural events, cultural education
+                events, and community collaboration projects.</span
+              ><span class="zh zh-block"></span>
+            </p>
+          </article>
+          <article class="home-activity">
+            <h3>
+              <span class="en">Scholarship and Educational Assistance</span
+              ><span class="zh">[中文：在此填写奖学金与教育协助标题]</span>
+            </h3>
+            <p class="section-description">
+              <span class="en"
+                >Additionally, our foundation also provides merit-based and
+                need-based scholarships to provide educational assistance to
+                students. These come in the form of annual scholarship awards
+                and educational grants.</span
+              ><span class="zh zh-block"></span>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery">
+        <div class="gallery-intro"></div>
+        <div class="photo-grid">
+          <figure class="photo-one">
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure class="photo-two">
+            <img src="" alt="" />
+          </figure>
+          <figure class="photo-three">
+            <img src="" alt="" />
+          </figure>
+          <div class="gallery-note">
+            <a href="gallery.html">See more here </a>
+            ✦
+          </div>
+        </div>
+      </section>
+
+      <section class="donate" id="donate">
+        <div class="donate-image">
+          <img src="" alt="" />
+        </div>
+        <div class="donate-copy">
+          <h2>Contribute to the Organization</h2>
+          <p>
+            Your support helps us invest in future programming, build local
+            community, and provide scholarship funds. Any amount is greatly
+            appreciated.
+          </p>
+          <button class="button button-gold" type="button" data-donate-open>
+            Donation details <span>→</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-top">
+        <a class="brand brand-footer" href="#top"
+          ><img class="brand-logo" src="nccu_logo.svg" alt="" /><span
+            ><span class="en"
+              >National Chengchi University<br />Northern California Alumni
+              Foundation</span
+            ><span class="zh zh-block"></span></span
+        ></a>
+      </div>
+      <section class="footer-contact" aria-label="Contact information">
+        <a class="footer-contact__label" href="mailto:nccuncaf@gmail.com"
+          >Contact <span>↗</span></a
+        >
+        <address class="footer-contact__details">
+          nccuncaf@gmail.com<br />5255 Stevens Creek Blvd., #126<br />Santa
+          Clara, CA 95051-6664
+        </address>
+      </section>
+      <div class="footer-bottom">
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
