@@ -1,0 +1,15 @@
+# macOS metadata
+.DS_Store
+
+# Microsoft Office temporary files
+~$*
+
+# Editor settings and local environment files
+.vscode/
+.env
+.env.*
+!.env.example
+
+# Local dependency and preview output
+node_modules/
+coverage/

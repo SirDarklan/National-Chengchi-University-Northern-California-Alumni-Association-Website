@@ -37,10 +37,37 @@ donationDialog?.addEventListener("click", (event) => {
 
 // Language Toggle
 const languageToggle = document.querySelector(".language-toggle");
+<<<<<<< HEAD
 
 languageToggle?.addEventListener("click", () => {
   const chineseMode = document.body.classList.toggle("zh-mode");
   languageToggle.setAttribute("aria-pressed", String(chineseMode));
+=======
+const languagePreferenceKey = "nccuncaf-language";
+
+const setLanguage = (useChinese) => {
+  document.documentElement.classList.toggle("zh-mode", useChinese);
+  document.body.classList.toggle("zh-mode", useChinese);
+  languageToggle?.setAttribute("aria-pressed", String(useChinese));
+};
+
+try {
+  setLanguage(localStorage.getItem(languagePreferenceKey) === "zh");
+} catch {
+  // Keep the default language if browser storage is unavailable.
+  setLanguage(false);
+}
+
+languageToggle?.addEventListener("click", () => {
+  const chineseMode = !document.body.classList.contains("zh-mode");
+  setLanguage(chineseMode);
+
+  try {
+    localStorage.setItem(languagePreferenceKey, chineseMode ? "zh" : "en");
+  } catch {
+    // The current page switches even if browser storage is unavailable.
+  }
+>>>>>>> site
 });
 
 const teamTabs = document.querySelectorAll("[data-team-tab]");
