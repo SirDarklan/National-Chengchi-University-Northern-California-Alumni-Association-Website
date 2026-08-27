@@ -336,23 +336,68 @@ body.zh-mode .zh-block {
   font-size: 16px;
   line-height: 1.6;
 }
-.home-activities {
-  border-top: 1px solid rgba(250, 246, 239, 0.32);
+.home-events {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
-.home-activity {
-  padding: 30px 0 32px;
-  border-bottom: 1px solid rgba(250, 246, 239, 0.32);
-}
-.home-activity h3 {
-  max-width: 850px;
-  margin: 0;
+.home-event-card {
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(250, 246, 239, 0.28);
   color: var(--cream);
-  font: 600 clamp(25px, 2.6vw, 39px)/1.08 var(--heading-font);
-  letter-spacing: -0.045em;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
 }
-.home-activity .section-description {
-  max-width: 780px;
-  margin-top: 14px;
+.home-event-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+.home-event-card:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+.home-event-image {
+  display: grid;
+  min-height: 245px;
+  place-items: center;
+  background: linear-gradient(135deg, #47617f, #1e395c);
+  color: rgba(250, 246, 239, 0.76);
+  font: 500 11px var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.home-event-details {
+  padding: 25px 26px 27px;
+}
+.home-event-details h3,
+.home-event-details p {
+  margin: 0;
+}
+.home-event-details h3 {
+  font: 500 clamp(16px, 2.4vw, 32px)/1.08 var(--heading-font);
+  letter-spacing: -0.04em;
+}
+.home-event-date {
+  margin-top: 17px !important;
+  color: var(--gold);
+  font: 600 14px var(--site-font);
+}
+.home-event-location {
+  margin-top: 8px !important;
+  color: rgba(250, 246, 239, 0.76);
+  font-size: 15px;
+}
+.home-event-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid currentColor;
+  color: var(--cream);
+  font: 500 11px var(--mono);
+  letter-spacing: 0.04em;
 }
 
 /* Home Page: gallery section */
@@ -947,8 +992,15 @@ footer {
   .section-description {
     font-size: 15px;
   }
-  .home-activity {
-    padding: 25px 0 27px;
+  .home-events {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .home-event-image {
+    min-height: 210px;
+  }
+  .home-event-details {
+    padding: 21px 22px 24px;
   }
   .photo-grid {
     grid-template-columns: 1fr 1fr;
