@@ -361,12 +361,14 @@ body.zh-mode .zh-block {
 }
 .home-event-image {
   display: grid;
-  min-height: 245px;
+  width: 100%;
+  height: clamp(190px, 18vw, 230px);
   place-items: center;
   background: linear-gradient(135deg, #47617f, #1e395c);
   color: rgba(250, 246, 239, 0.76);
   font: 500 11px var(--mono);
   letter-spacing: 0.06em;
+  object-fit: cover;
   text-transform: uppercase;
 }
 .home-event-details {
@@ -670,6 +672,74 @@ footer {
   display: block;
   content: "";
   margin-top: 0.75em;
+}
+.event-detail {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1fr);
+  gap: clamp(26px, 5vw, 70px);
+  align-items: start;
+}
+.event-detail-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.event-detail-copy h2 {
+  margin-top: 0;
+  font-size: clamp(24px, 2.4vw, 36px);
+  line-height: 1.08;
+}
+.event-detail-facts {
+  display: grid;
+  gap: 16px;
+  margin: 25px 0 0;
+}
+.event-detail-facts div {
+  display: grid;
+  gap: 4px;
+}
+.event-detail-facts dt {
+  color: var(--gold);
+  font: 500 11px var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.event-detail-facts dd {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.event-detail-description {
+  max-width: 680px;
+  margin-top: 29px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(13, 34, 64, 0.2);
+}
+.event-detail-description h3 {
+  margin: 0 0 9px;
+  color: var(--gold);
+  font: 500 11px var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.event-detail-description p {
+  color: var(--ink);
+}
+.event-description-list {
+  margin: 18px 0 0;
+  padding-left: 20px;
+  color: var(--ink);
+  line-height: 1.55;
+}
+.event-description-list li + li {
+  margin-top: 9px;
+}
+.event-description-list li::marker {
+  color: var(--gold);
+}
+.event-ticket-button {
+  margin-top: 26px;
 }
 
 /* Team Page */
@@ -997,7 +1067,7 @@ footer {
     gap: 18px;
   }
   .home-event-image {
-    min-height: 210px;
+    height: 190px;
   }
   .home-event-details {
     padding: 21px 22px 24px;
@@ -1044,6 +1114,10 @@ footer {
   }
   .activities-list article {
     padding: 30px 0;
+  }
+  .event-detail {
+    grid-template-columns: 1fr;
+    gap: 22px;
   }
   .album-bar {
     flex-direction: column;
