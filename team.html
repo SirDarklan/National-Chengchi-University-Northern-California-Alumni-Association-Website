@@ -8,6 +8,13 @@
       content="NCCU Northern California Alumni Foundation team page."
     />
     <title>Team</title>
+    <script>
+      try {
+        if (localStorage.getItem("nccuncaf-language") === "zh") {
+          document.documentElement.classList.add("zh-mode");
+        }
+      } catch {}
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,12 +27,11 @@
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="NCCU-NorCal-AF home">
         <!-- <img class="brand-logo" src="nccu_logo.svg" alt="" /> -->
-          <span class="en"
-            >National Chengchi University<br />Northern California Alumni
-            Foundation</span
-          ><span class="zh zh-block">國立政治大學北加州校友基金會</span>
-      </a
-      >
+        <span class="en"
+          >National Chengchi University<br />Northern California Alumni
+          Foundation</span
+        ><span class="zh zh-block">國立政治大學北加州校友基金會</span>
+      </a>
       <button
         class="menu-toggle"
         aria-expanded="false"
@@ -159,9 +165,7 @@
             <div class="team-member-copy">
               <h2>Member name</h2>
               <p class="team-member-title">Board title / role</p>
-              <p>
-
-              </p>
+              <p></p>
             </div>
           </article>
           <article class="team-member">
@@ -171,9 +175,7 @@
             <div class="team-member-copy">
               <h2>Member name</h2>
               <p class="team-member-title">Board title / role</p>
-              <p>
-
-              </p>
+              <p></p>
             </div>
           </article>
         </div>
@@ -193,9 +195,7 @@
             <div class="team-member-copy">
               <h2>Member name</h2>
               <p class="team-member-title">Director title / role</p>
-              <p>
-
-              </p>
+              <p></p>
             </div>
           </article>
           <article class="team-member">
@@ -205,9 +205,7 @@
             <div class="team-member-copy">
               <h2>Member name</h2>
               <p class="team-member-title">Director title / role</p>
-              <p>
-
-              </p>
+              <p></p>
             </div>
           </article>
         </div>
@@ -227,8 +225,7 @@
             <div class="team-member-copy">
               <h2>Member name</h2>
               <p class="team-member-title">Officer title / role</p>
-              <p>
-              </p>
+              <p></p>
             </div>
           </article>
           <article class="team-member">
@@ -238,9 +235,7 @@
             <div class="team-member-copy">
               <h2>Member name</h2>
               <p class="team-member-title">Officer title / role</p>
-              <p>
-
-              </p>
+              <p></p>
             </div>
           </article>
         </div>
@@ -249,8 +244,9 @@
 
     <footer>
       <div class="footer-top">
-        <a class="brand brand-footer" href="index.html"
-          > <!-- <img class="brand-logo" src="nccu_logo.svg" alt="" /> --> <span
+        <a class="brand brand-footer" href="index.html">
+          <!-- <img class="brand-logo" src="nccu_logo.svg" alt="" /> -->
+          <span
             >National Chengchi University<br />Northern California Alumni
             Foundation
           </span></a

@@ -31,12 +31,15 @@ img {
 .zh {
   display: none;
 }
+html.zh-mode .en,
 body.zh-mode .en {
   display: none;
 }
+html.zh-mode .zh,
 body.zh-mode .zh {
   display: inline;
 }
+html.zh-mode .zh-block,
 body.zh-mode .zh-block {
   display: block;
 }
@@ -147,6 +150,19 @@ body.zh-mode .zh-block {
 }
 
 .language-toggle[aria-pressed="true"] .language-toggle__thumb {
+  transform: translateX(100%);
+}
+
+/* Apply the saved language state before the page's toggle button is available. */
+html.zh-mode
+  .language-toggle[aria-pressed="false"]
+  .language-toggle__option:first-child {
+  color: var(--cream);
+}
+html.zh-mode .language-toggle .language-toggle__option:last-child {
+  color: var(--navy);
+}
+html.zh-mode .language-toggle__thumb {
   transform: translateX(100%);
 }
 

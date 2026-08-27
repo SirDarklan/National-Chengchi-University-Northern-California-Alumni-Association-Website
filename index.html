@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A local community for College alumni." />
     <title>Home</title>
+    <script>
+      try {
+        if (localStorage.getItem("nccuncaf-language") === "zh") {
+          document.documentElement.classList.add("zh-mode");
+        }
+      } catch {}
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -261,7 +268,8 @@
                   Navigating AI Workflows in Digital Art</span
                 >
                 <span class="zh"
-                  >教育講座 - 像素、多邊形和提示：駕馭數位藝術中的AI工作流程”</span
+                  >教育講座 -
+                  像素、多邊形和提示：駕馭數位藝術中的AI工作流程”</span
                 >
               </h3>
               <p class="home-event-date">
