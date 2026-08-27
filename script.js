@@ -37,12 +37,6 @@ donationDialog?.addEventListener("click", (event) => {
 
 // Language Toggle
 const languageToggle = document.querySelector(".language-toggle");
-<<<<<<< HEAD
-
-languageToggle?.addEventListener("click", () => {
-  const chineseMode = document.body.classList.toggle("zh-mode");
-  languageToggle.setAttribute("aria-pressed", String(chineseMode));
-=======
 const languagePreferenceKey = "nccuncaf-language";
 
 const setLanguage = (useChinese) => {
@@ -67,7 +61,6 @@ languageToggle?.addEventListener("click", () => {
   } catch {
     // The current page switches even if browser storage is unavailable.
   }
->>>>>>> site
 });
 
 const teamTabs = document.querySelectorAll("[data-team-tab]");
