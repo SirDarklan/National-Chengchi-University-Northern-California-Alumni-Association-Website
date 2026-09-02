@@ -84,11 +84,9 @@ teamTabs.forEach((tab) => {
   });
 });
 
-const homeHeaderBrand = document.querySelector(
-  '.site-header .brand[href="#top"]',
-);
-
-homeHeaderBrand?.addEventListener("click", (event) => {
-  event.preventDefault();
-  window.scrollTo({ top: 0, behavior: "smooth" });
+document.querySelectorAll('a[href="#top"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });
