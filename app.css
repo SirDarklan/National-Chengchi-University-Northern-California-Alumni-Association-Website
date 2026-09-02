@@ -89,7 +89,7 @@ body.zh-mode .zh-block {
 }
 .nav a {
   color: rgba(255, 255, 255, 0.88);
-  font: 500 px var(--mono);
+  font: 500 18px var(--mono);
   letter-spacing: 0.035em;
   text-decoration: none;
 }
