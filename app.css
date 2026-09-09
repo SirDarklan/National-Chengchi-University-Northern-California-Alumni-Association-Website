@@ -695,11 +695,20 @@ footer {
   gap: clamp(26px, 5vw, 70px);
   align-items: start;
 }
+.event-detail-media {
+  display: grid;
+  gap: 18px;
+}
 .event-detail-image {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+.event-detail-image--flyer {
+  aspect-ratio: auto;
+  border: 1px solid rgba(13, 34, 64, 0.15);
+  object-fit: contain;
 }
 .event-detail-copy h2 {
   margin-top: 0;
