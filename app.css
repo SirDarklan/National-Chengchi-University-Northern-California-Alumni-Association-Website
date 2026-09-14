@@ -810,6 +810,14 @@ footer {
     var(--blue-light);
   color: var(--navy);
 }
+.team-member-photo {
+  display: block;
+  width: 100%;
+  min-height: 180px;
+  aspect-ratio: 3 / 4;
+  background: var(--blue-light);
+  object-fit: cover;
+}
 
 .team-photo-placeholder span {
   padding: 8px 10px;
@@ -867,6 +875,9 @@ footer {
   }
 
   .team-photo-placeholder {
+    min-height: 145px;
+  }
+  .team-member-photo {
     min-height: 145px;
   }
 }
