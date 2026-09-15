@@ -427,29 +427,42 @@ html.zh-mode .language-toggle__thumb {
 }
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1.05fr 0.72fr 0.95fr;
+  grid-template-rows: 230px 190px;
   gap: 18px;
 }
 .photo-grid figure {
+  position: relative;
   margin: 0;
+  overflow: hidden;
 }
 .photo-grid img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  background: var(--blue-light);
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+}
+.photo-one {
+  grid-row: 1 / 3;
+}
+.photo-two {
+  grid-column: 2;
+}
+.photo-three {
+  grid-column: 3;
+  grid-row: 1 / 3;
 }
 .photo-grid figcaption {
-  margin-top: 10px;
-  color: var(--navy);
-  font: 500 11px/1.45 var(--site-font);
-  line-height: 1.45;
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  padding: 7px 9px;
+  background: var(--cream);
+  font: 500 9px var(--mono);
+  text-transform: uppercase;
 }
 .gallery-note {
   position: relative;
-  grid-column: span 2;
   padding: 20px;
   background: var(--gold);
   font: 600 21px/1.08 var(--heading-font);
@@ -546,10 +559,25 @@ html.zh-mode .language-toggle__thumb {
   margin: 18px 0 10px;
   font: 700 clamp(24px, 7vw, 32px) var(--heading-font);
 }
-.payment-note {
-  margin: 0 0 18px;
-  font-size: 14px;
+.online-donation {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 22px;
+  padding: 20px;
+  border-left: 4px solid var(--gold);
+  background: var(--green-light);
+}
+.online-donation__copy p {
+  margin: 0 0 16px;
+  font-size: 15px;
   line-height: 1.5;
+}
+.online-donation__qr {
+  display: block;
+  width: 150px;
+  height: 150px;
 }
 .payment-instructions {
   margin: 0 0 20px;
@@ -626,6 +654,13 @@ footer {
 @media (max-width: 760px) {
   .footer-contact {
     margin-bottom: 42px;
+  }
+  .online-donation {
+    grid-template-columns: 1fr;
+  }
+  .online-donation__qr {
+    width: 130px;
+    height: 130px;
   }
 }
 
@@ -810,14 +845,6 @@ footer {
     var(--blue-light);
   color: var(--navy);
 }
-.team-member-photo {
-  display: block;
-  width: 100%;
-  min-height: 180px;
-  aspect-ratio: 3 / 4;
-  background: var(--blue-light);
-  object-fit: cover;
-}
 
 .team-photo-placeholder span {
   padding: 8px 10px;
@@ -877,9 +904,6 @@ footer {
   .team-photo-placeholder {
     min-height: 145px;
   }
-  .team-member-photo {
-    min-height: 145px;
-  }
 }
 
 /* Photo Gallery Page */
@@ -918,26 +942,30 @@ footer {
 }
 .gallery-wall {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 250px;
+  grid-template-columns: 1.1fr 0.8fr 1fr;
   gap: 18px;
   padding: 26px clamp(22px, 7.6vw, 120px) 110px;
 }
 .gallery-wall figure {
+  position: relative;
   margin: 0;
+  overflow: hidden;
 }
 .gallery-wall figcaption {
-  margin-top: 10px;
-  color: var(--navy);
-  font: 500 11px/1.45 var(--site-font);
-  line-height: 1.45;
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  padding: 7px 9px;
+  background: var(--cream);
+  font: 500 9px var(--mono);
+  text-transform: uppercase;
 }
-.gallery-wall figure > img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  background: var(--blue-light);
-  object-fit: contain;
+.wall-tall {
+  grid-row: span 2;
+}
+.wall-wide {
+  grid-column: span 2;
 }
 .photo-placeholder {
   display: grid;
@@ -962,8 +990,7 @@ footer {
 }
 .wall-callout {
   display: flex;
-  min-height: 180px;
-  grid-column: span 2;
+  min-height: 250px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
@@ -1096,9 +1123,21 @@ footer {
     padding: 21px 22px 24px;
   }
   .photo-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 230px 190px 130px;
+  }
+  .photo-one {
+    grid-row: 1/3;
+  }
+  .photo-two {
+    grid-column: 2;
+  }
+  .photo-three {
+    grid-column: 2;
+    grid-row: 2/4;
   }
   .gallery-note {
+    grid-row: 3;
     grid-column: 1;
   }
   .donate {
@@ -1135,11 +1174,15 @@ footer {
     align-items: flex-start;
   }
   .gallery-wall {
-    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
   .wall-callout {
     min-height: 180px;
-    grid-column: 1;
+    grid-column: span 2;
+  }
+  .wall-wide {
+    grid-column: span 2;
   }
 }
