@@ -63,25 +63,61 @@ languageToggle?.addEventListener("click", () => {
   }
 });
 
-const teamTabs = document.querySelectorAll("[data-team-tab]");
-const teamPanels = document.querySelectorAll("[data-team-panel]");
+const teamDetailsDialog = document.querySelector(".team-details-dialog");
+const teamDetailsPhoto = document.querySelector(".team-details-dialog__photo");
+const teamDetailsName = document.querySelector("#team-details-name");
+const teamDetailsTitle = document.querySelector(".team-details-dialog__title");
+const teamDetailsBio = document.querySelector(".team-details-dialog__bio");
 
-teamTabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const group = tab.dataset.teamTab;
+document.querySelectorAll(".team-member").forEach((member) => {
+  const memberPhoto = member.querySelector(
+    ".team-member-photo, .team-photo-placeholder",
+  );
+  const memberName = member.querySelector(".team-member-copy h2");
 
-    teamTabs.forEach((item) => {
-      const isActive = item === tab;
-      item.classList.toggle("active", isActive);
-      item.setAttribute("aria-selected", String(isActive));
-    });
+  if (!memberPhoto || !memberName || !teamDetailsDialog) return;
 
-    teamPanels.forEach((panel) => {
-      const isActive = panel.dataset.teamPanel === group;
-      panel.classList.toggle("active", isActive);
-      panel.hidden = !isActive;
-    });
+  const openTeamDetails = () => {
+    const memberTitle = member.querySelector(".team-member-title");
+    const memberBio = member.querySelectorAll(
+      ".team-member-copy > p:not(.team-member-title)",
+    );
+
+    teamDetailsPhoto?.replaceChildren(memberPhoto.cloneNode(true));
+    if (teamDetailsName) teamDetailsName.textContent = memberName.textContent;
+    if (teamDetailsTitle) {
+      teamDetailsTitle.textContent = memberTitle?.textContent.trim() || "";
+    }
+    teamDetailsBio?.replaceChildren(
+      ...[...memberBio].map((paragraph) => paragraph.cloneNode(true)),
+    );
+    teamDetailsDialog.showModal();
+  };
+
+  memberPhoto.dataset.teamDetailsTrigger = "true";
+  memberPhoto.tabIndex = 0;
+  memberPhoto.setAttribute("role", "button");
+  memberPhoto.setAttribute(
+    "aria-label",
+    `View details for ${memberName.textContent}`,
+  );
+  memberPhoto.addEventListener("click", openTeamDetails);
+  memberPhoto.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openTeamDetails();
+    }
   });
+});
+
+document
+  .querySelector("[data-team-details-close]")
+  ?.addEventListener("click", () => {
+    teamDetailsDialog?.close();
+  });
+
+teamDetailsDialog?.addEventListener("click", (event) => {
+  if (event.target === teamDetailsDialog) teamDetailsDialog.close();
 });
 
 document.querySelectorAll('a[href="#top"]').forEach((link) => {
