@@ -102,6 +102,9 @@ body.zh-mode .zh-block {
   color: var(--gold);
 }
 .nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   padding: 8px 11px;
   border: 1px solid var(--gold);
   border-radius: 99px;
@@ -490,6 +493,9 @@ html.zh-mode .language-toggle__thumb {
   grid-template-columns: 1fr 1fr;
   background: var(--pink);
 }
+.donate-image {
+  padding: clamp(26px, 4.5vw, 72px);
+}
 .donate-image img {
   display: block;
   width: 100%;
@@ -517,6 +523,24 @@ html.zh-mode .language-toggle__thumb {
 }
 .donate-copy .button {
   cursor: pointer;
+}
+.donate-options {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.donate-options .button {
+  padding: 14px 18px;
+  font-size: 18px;
+}
+.donate-scan-label {
+  color: rgba(13, 34, 64, 0.78);
+  font: 500 18px/1.35 var(--site-font);
+}
+.donate-qr {
+  width: 154px;
+  height: 154px;
 }
 
 .donation-dialog {
