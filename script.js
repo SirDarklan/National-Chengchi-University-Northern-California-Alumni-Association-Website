@@ -63,27 +63,6 @@ languageToggle?.addEventListener("click", () => {
   }
 });
 
-const teamTabs = document.querySelectorAll("[data-team-tab]");
-const teamPanels = document.querySelectorAll("[data-team-panel]");
-
-teamTabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const group = tab.dataset.teamTab;
-
-    teamTabs.forEach((item) => {
-      const isActive = item === tab;
-      item.classList.toggle("active", isActive);
-      item.setAttribute("aria-selected", String(isActive));
-    });
-
-    teamPanels.forEach((panel) => {
-      const isActive = panel.dataset.teamPanel === group;
-      panel.classList.toggle("active", isActive);
-      panel.hidden = !isActive;
-    });
-  });
-});
-
 const teamDetailsDialog = document.querySelector(".team-details-dialog");
 const teamDetailsPhoto = document.querySelector(".team-details-dialog__photo");
 const teamDetailsName = document.querySelector("#team-details-name");
