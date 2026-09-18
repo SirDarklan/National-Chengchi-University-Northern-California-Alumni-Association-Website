@@ -378,7 +378,7 @@ html.zh-mode .language-toggle__thumb {
 .home-event-image {
   display: grid;
   width: 100%;
-  height: clamp(190px, 18vw, 230px);
+  height: clamp(320px, 18vw, 520px);
   place-items: center;
   background: linear-gradient(135deg, #47617f, #1e395c);
   color: rgba(250, 246, 239, 0.76);
@@ -386,6 +386,11 @@ html.zh-mode .language-toggle__thumb {
   letter-spacing: 0.06em;
   object-fit: cover;
   text-transform: uppercase;
+}
+.home-event-image--groups {
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: contain;
 }
 .home-event-details {
   padding: 25px 26px 27px;
@@ -1054,7 +1059,7 @@ footer {
     border: 0;
     background: none;
     color: var(--cream);
-    font: 500 11px var(--mono);
+    font: 500 20px var(--mono);
   }
   .menu-toggle span {
     width: 10px;
@@ -1118,6 +1123,9 @@ footer {
   }
   .home-event-image {
     height: 190px;
+  }
+  .home-event-image--groups {
+    height: auto;
   }
   .home-event-details {
     padding: 21px 22px 24px;
