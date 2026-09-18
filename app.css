@@ -825,9 +825,9 @@ footer {
 
 .team-panel {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 330px));
+  grid-template-columns: repeat(3, minmax(0, 280px));
   justify-content: center;
-  gap: 42px 28px;
+  gap: 48px 56px;
 }
 .team-panel[hidden] {
   display: none !important;
@@ -959,6 +959,12 @@ footer {
   line-height: 1.65;
 }
 
+@media (max-width: 1050px) {
+  .team-panel {
+    grid-template-columns: repeat(2, minmax(0, 280px));
+  }
+}
+
 @media (max-width: 760px) {
   .team-directory {
     padding-top: 30px;
@@ -984,6 +990,7 @@ footer {
   .team-panel {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-content: stretch;
+    gap: 32px 18px;
   }
 
   .team-member-photo,
