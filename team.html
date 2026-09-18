@@ -67,8 +67,7 @@
         <!-- <a href="shop.html">Shop</a> -->
         <a href="#donate" class="nav-cta" data-donate-open
           ><span class="en">Donate</span><span class="zh">捐錢</span>
-          </a
-        >
+        </a>
       </nav>
     </header>
 
@@ -117,6 +116,27 @@
         <h2>Wire Transfer 銀行電匯 - Domestic Only</h2>
         <div class="payment-instructions">
           <p>Please contact nccuncaf@gmail.com for more details</p>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="team-details-dialog" aria-labelledby="team-details-name">
+      <div class="team-details-dialog__content">
+        <button
+          class="team-details-dialog__close"
+          type="button"
+          data-team-details-close
+          aria-label="Close member details"
+        >
+          ×
+        </button>
+        <div class="team-details-dialog__layout">
+          <div class="team-details-dialog__photo" aria-hidden="true"></div>
+          <div class="team-details-dialog__copy">
+            <h2 id="team-details-name"></h2>
+            <p class="team-details-dialog__title"></p>
+            <div class="team-details-dialog__bio"></div>
+          </div>
         </div>
       </div>
     </dialog>
