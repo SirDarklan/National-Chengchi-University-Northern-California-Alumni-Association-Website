@@ -67,6 +67,10 @@ body.zh-mode .zh-block {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
+.site-header .brand .zh-block {
+  font-size: clamp(16px, 1.25vw, 19px);
+  letter-spacing: 0.04em;
+}
 .site-header .brand {
   position: absolute;
   left: clamp(22px, 5vw, 78px);
