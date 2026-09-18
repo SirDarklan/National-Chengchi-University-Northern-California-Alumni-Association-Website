@@ -812,7 +812,7 @@ footer {
 
 .team-panel {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 280px));
+  grid-template-columns: repeat(3, minmax(0, 220px));
   justify-content: center;
   gap: 48px 56px;
 }
@@ -842,8 +842,8 @@ footer {
     transform 180ms ease;
 }
 
-.team-member-photo:hover,
-.team-photo-placeholder:hover,
+.team-member .team-member-photo:hover,
+.team-member .team-photo-placeholder:hover,
 .team-member [data-team-details-trigger]:focus-visible {
   box-shadow:
     0 0 0 4px rgba(201, 149, 42, 0.18),
@@ -866,6 +866,7 @@ footer {
 
 .team-member-copy {
   margin-top: 18px;
+  text-align: center;
 }
 
 .team-member-copy h2 {
@@ -953,6 +954,20 @@ footer {
   margin: 0 0 16px;
   font-size: 16px;
   line-height: 1.65;
+}
+
+@media (min-width: 1051px) {
+  .team-group--officers .team-member:nth-child(4),
+  .team-group--officers .team-member:nth-child(5) {
+    transform: translateX(138px);
+  }
+}
+
+@media (min-width: 1180px) {
+  .team-group--others .team-panel {
+    grid-template-columns: repeat(4, minmax(0, 220px));
+    gap: 48px 40px;
+  }
 }
 
 @media (max-width: 1050px) {
