@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///Users/dannykuei/Downloads/alumni-association%202.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alumni Association | 校友会</title>
+<link href="./Alumni Association _ 校友会_files/css2" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d2240;
+    --gold: #c9952a;
+    --gold-light: #e8c472;
+    --cream: #faf6ef;
+    --warm-gray: #f4f0e8;
+    --text-dark: #1a1a1a;
+    --text-mid: #4a4a4a;
+    --text-light: #7a7a7a;
+    --border: rgba(13,34,64,0.15);
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Serif 4', serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+  .zh { display: none; }
+  body.zh-mode .en { display: none; }
+  body.zh-mode .zh { display: block; }
+  body.zh-mode .zh-inline { display: inline; }
+  body.zh-mode .en-inline { display: none; }
+  .zh-inline { display: none; }
+  .en-inline { display: inline; }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--navy);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 4vw;
+    height: 64px;
+    border-bottom: 3px solid var(--gold);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none; align-items: center;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: 'Source Serif 4', sans-serif;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .lang-toggle {
+    background: transparent;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    padding: 5px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+    font-family: 'Source Serif 4', serif;
+  }
+  .lang-toggle:hover { background: var(--gold); color: var(--navy); }
+  .nav-cart {
+    position: relative;
+    background: var(--gold);
+    border: none;
+    color: var(--navy);
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: transform 0.2s;
+  }
+  .nav-cart:hover { transform: scale(1.1); }
+  .cart-badge {
+    position: absolute; top: -4px; right: -4px;
+    background: #c0392b; color: white;
+    border-radius: 50%; width: 18px; height: 18px;
+    font-size: 10px; display: flex; align-items: center; justify-content: center;
+    font-weight: 700; display: none;
+  }
+  .nav-right { display: flex; align-items: center; gap: 14px; }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    min-height: 82vh;
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .hero-pattern {
+    position: absolute; inset: 0; opacity: 0.06;
+    background-image: repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%);
+    background-size: 20px 20px;
+  }
+  .hero-ring {
+    position: absolute; right: -120px; top: 50%; transform: translateY(-50%);
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    border: 60px solid rgba(201,149,42,0.1);
+  }
+  .hero-ring2 {
+    position: absolute; right: 60px; top: 50%; transform: translateY(-50%);
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    border: 2px solid rgba(201,149,42,0.25);
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 6rem 8vw;
+    max-width: 680px;
+  }
+  .hero-year {
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+    .hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.8rem, 5vw, 4.5rem);
+        color: white;
+        line-height: 1.1;
+        margin-bottom: 0.3rem;
+    }
+    .hero h1 em {
+        color: var(--gold);
+        font-style: italic;
+    }
+  .hero-zh-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+
+    display: none;
+  }
+  body.zh-mode .hero-zh-title { display: block; }
+  .hero p {
+    color: rgba(255,255,255,0.75);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    max-width: 520px;
+  }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-gold {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 14px 32px;
+    border: none; cursor: pointer;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.2s;
+    font-family: 'Source Serif 4', serif;
+  }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent;
+    color: white;
+    padding: 13px 32px;
+    border: 1.5px solid rgba(255,255,255,0.4); cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+    font-family: 'Source Serif 4', serif;
+  }
+  .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.08); }
+  .hero-stats {
+    display: flex; gap: 3rem;
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--gold);
+    font-weight: 700;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  /* SECTION SHARED */
+  section { padding: 90px 8vw; }
+  .section-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 3px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 0.6rem;
+  }
+  .section-sub {
+    color: var(--text-mid);
+    font-size: 1rem;
+    max-width: 580px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    color: var(--text-light);
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.08em;
+    display: none;
+  }
+  body.zh-mode .section-title-zh { display: block; }
+
+  /* EVENTS */
+  #events { background: white; }
+  .events-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2px; }
+  .event-card {
+    background: var(--cream);
+    padding: 2rem;
+    border-left: 4px solid transparent;
+    transition: border-color 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  .event-card:hover { border-color: var(--gold); transform: translateX(4px); }
+  .event-date {
+    display: inline-flex; flex-direction: column; align-items: center;
+    background: var(--navy);
+    color: white;
+    width: 56px; height: 56px;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .event-date-month { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+  .event-date-day { font-size: 1.5rem; font-family: 'Playfair Display', serif; font-weight: 700; line-height: 1; }
+  .event-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); margin-bottom: 0.5rem; font-weight: 700; }
+  .event-body { font-size: 0.88rem; color: var(--text-mid); line-height: 1.65; }
+  .event-meta { margin-top: 1rem; font-size: 0.75rem; color: var(--text-light); letter-spacing: 0.05em; }
+  .event-meta span { margin-right: 1.2rem; }
+  .add-event-btn {
+    margin-top: 2.5rem;
+    background: var(--navy);
+    color: white;
+    border: none; padding: 14px 28px;
+    cursor: pointer; font-size: 0.85rem;
+    font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+    font-family: 'Source Serif 4', serif;
+  }
+  .add-event-btn:hover { background: var(--gold); color: var(--navy); }
+
+  /* EVENT FORM */
+  .event-form-wrap {
+    display: none;
+    background: var(--warm-gray);
+    padding: 2.5rem;
+    margin-top: 2rem;
+    border-left: 4px solid var(--gold);
+  }
+  .event-form-wrap.open { display: block; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group label { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-mid); font-weight: 600; }
+  .form-group input, .form-group textarea, .form-group select {
+    border: 1px solid var(--border);
+    padding: 10px 14px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.95rem;
+    background: white;
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus, .form-group textarea:focus { border-color: var(--gold); }
+  .form-group textarea { min-height: 90px; resize: vertical; }
+  .form-submit { background: var(--gold); color: var(--navy); border: none; padding: 12px 28px; cursor: pointer; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.2s; font-family: 'Source Serif 4', serif; }
+  .form-submit:hover { background: var(--navy); color: white; }
+
+  /* GALLERY */
+  #gallery { background: white; }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 8px;
+    margin-bottom: 2rem;
+  }
+  .gallery-item {
+    aspect-ratio: 1;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  .gallery-item img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.4s;
+  }
+  .gallery-item:hover img { transform: scale(1.05); }
+  .gallery-placeholder {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-size: 2.5rem;
+    color: rgba(255,255,255,0.4);
+  }
+  .gallery-placeholder .ph-label { font-size: 0.75rem; margin-top: 0.5rem; letter-spacing: 0.08em; text-transform: uppercase; font-family: 'Source Serif 4', serif; }
+  .gallery-upload-zone {
+    border: 2px dashed var(--border);
+    padding: 3rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--warm-gray);
+  }
+  .gallery-upload-zone:hover, .gallery-upload-zone.dragover { border-color: var(--gold); background: rgba(201,149,42,0.05); }
+  .upload-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
+  .upload-text { font-size: 0.95rem; color: var(--text-mid); line-height: 1.6; }
+  .upload-text strong { color: var(--navy); }
+  #photo-input { display: none; }
+  .gallery-caption { font-size: 0.8rem; color: var(--text-light); text-align: center; margin-top: 1rem; font-style: italic; }
+
+  /* NEWSLETTER */
+  #newsletter {
+    background: var(--navy);
+    padding: 90px 8vw;
+    position: relative; overflow: hidden;
+  }
+  .nl-pattern {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image: repeating-linear-gradient(-45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 40%);
+    background-size: 15px 15px;
+  }
+  .nl-content { position: relative; z-index: 1; max-width: 700px; }
+  #newsletter .section-tag { color: var(--gold-light); border-color: var(--gold-light); }
+  #newsletter .section-title { color: white; }
+  #newsletter .section-sub { color: rgba(255,255,255,0.65); }
+  #newsletter .section-title-zh { color: rgba(255,255,255,0.4); }
+  .nl-form { display: flex; gap: 0; max-width: 520px; }
+  .nl-input {
+    flex: 1;
+    border: none; border-bottom: 2px solid rgba(255,255,255,0.3);
+    background: transparent; color: white;
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    font-family: 'Source Serif 4', serif;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .nl-input::placeholder { color: rgba(255,255,255,0.4); }
+  .nl-input:focus { border-color: var(--gold); }
+  .nl-submit {
+    background: var(--gold); color: var(--navy);
+    border: none; padding: 14px 28px;
+    cursor: pointer; font-weight: 700;
+    font-size: 0.85rem; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+    font-family: 'Source Serif 4', serif;
+    white-space: nowrap;
+  }
+  .nl-submit:hover { background: var(--gold-light); }
+  .nl-success { color: var(--gold-light); font-size: 0.95rem; margin-top: 1rem; display: none; }
+  .nl-archive {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  .nl-issue {
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 1.4rem;
+    transition: border-color 0.2s;
+    cursor: pointer;
+  }
+  .nl-issue:hover { border-color: var(--gold); }
+  .nl-issue-vol { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 0.5rem; }
+  .nl-issue-title { color: white; font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: 0.5rem; }
+  .nl-issue-date { font-size: 0.78rem; color: rgba(255,255,255,0.4); }
+  .nl-issue-tag { display: inline-block; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 8px; margin-top: 0.8rem; background: rgba(201,149,42,0.2); color: var(--gold-light); border-radius: 2px; }
+
+  /* FOOTER */
+  footer {
+    background: #080f1c;
+    padding: 3rem 8vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+  .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-text { font-size: 0.83rem; color: rgba(255,255,255,0.4); line-height: 1.7; }
+  .footer-heading { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 1rem; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 0.5rem; }
+  .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-bottom { grid-column: 1/-1; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; font-size: 0.78rem; color: rgba(255,255,255,0.25); display: flex; justify-content: space-between; }
+
+  /* NOTIFICATION */
+  .notif {
+    position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+    background: var(--navy); color: white;
+    padding: 14px 22px;
+    font-size: 0.9rem;
+    border-left: 4px solid var(--gold);
+    transform: translateY(80px); opacity: 0;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+  }
+  .notif.show { transform: translateY(0); opacity: 1; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    footer { grid-template-columns: 1fr; }
+    .hero-stats { gap: 1.5rem; }
+    .nl-form { flex-direction: column; }
+    .nl-submit { padding: 12px; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-content > * { animation: fadeUp 0.7s ease backwards; }
+  .hero-year { animation-delay: 0.1s; }
+  .hero h1 { animation-delay: 0.2s; }
+  .hero p { animation-delay: 0.35s; }
+  .hero-btns { animation-delay: 0.5s; }
+  .hero-stats { animation-delay: 0.65s; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#" class="nav-logo">
+    <span class="en-inline">Alumni Association</span>
+    <span class="zh-inline">校友会</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#events"><span class="en-inline">Events</span><span class="zh-inline">活动</span></a></li>
+    <li><a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#shop"><span class="en-inline">Shop</span><span class="zh-inline">商店</span></a></li>
+    <li><a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#gallery"><span class="en-inline">Gallery</span><span class="zh-inline">相册</span></a></li>
+    <li><a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#newsletter"><span class="en-inline">Newsletter</span><span class="zh-inline">通讯</span></a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-toggle" onclick="toggleLang()" id="langBtn">中文</button>
+    <button class="nav-cart" onclick="toggleCart()" title="Cart">
+      🛒
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-pattern"></div>
+  <div class="hero-ring"></div>
+  <div class="hero-ring2"></div>
+  <div class="hero-content">
+    <p class="hero-year">
+      <span class="en-inline">Est. 1965 · Building Connections Across Generations</span>
+      <span class="zh-inline">创立于 1965 年 · 跨越代际，凝聚校友情谊</span>
+    </p>
+    <h1>
+      <span class="en-inline">Where <em>Alumni</em><br>Come Together</span>
+      <span class="zh-inline">校友聚首<br>共叙<em>情谊</em></span>
+    </h1>
+    <div class="hero-zh-title">
+      <span class="en-inline">共叙情谊，传承精神</span>
+      <span class="zh-inline">Where Alumni Come Together</span>
+    </div>
+    <p>
+      <span class="en-inline">Reconnect with classmates, celebrate milestones, and carry forward the proud legacy of our institution. You are always part of this family.</span>
+      <span class="zh-inline">与同学重叙旧情，共庆人生里程碑，传承学校的骄傲精神。无论身在何处，您永远是这个大家庭的一员。</span>
+    </p>
+    <div class="hero-btns">
+      <a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#events" class="btn-gold"><span class="en-inline">View Events</span><span class="zh-inline">查看活动</span></a>
+      <a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#shop" class="btn-outline"><span class="en-inline">Shop Merch</span><span class="zh-inline">购买周边</span></a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">12,400+</div>
+        <div class="stat-label"><span class="en-inline">Alumni Members</span><span class="zh-inline">校友成员</span></div>
+      </div>
+      <div>
+        <div class="stat-num">58</div>
+        <div class="stat-label"><span class="en-inline">Countries</span><span class="zh-inline">覆盖国家</span></div>
+      </div>
+      <div>
+        <div class="stat-num">6</div>
+        <div class="stat-label"><span class="en-inline">Annual Events</span><span class="zh-inline">年度活动</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="section-tag"><span class="en-inline">Upcoming</span><span class="zh-inline">即将举行</span></div>
+  <h2 class="section-title"><span class="en-inline">Events &amp; Reunions</span><span class="zh-inline">活动与聚会</span></h2>
+  <div class="section-title-zh">校友活动日历</div>
+  <p class="section-sub">
+    <span class="en-inline">From annual galas to regional meetups, there's always something to look forward to. Join us and reconnect.</span>
+    <span class="zh-inline">从年度盛典到地区聚会，总有令人期待的精彩活动。加入我们，重续校友情谊。</span>
+  </p>
+
+  <div class="events-grid" id="eventsGrid">
+    <div class="event-card">
+      <div class="event-date"><span class="event-date-month">Jun</span><span class="event-date-day">14</span></div>
+      <div class="event-title"><span class="en-inline">Annual Alumni Gala 2025</span><span class="zh-inline">2025年校友年度晚宴</span></div>
+      <div class="event-body"><span class="en-inline">An elegant evening of celebration, awards, and reconnecting with old friends. Black tie optional.</span><span class="zh-inline">一个优雅的庆典之夜，颁奖典礼，与老朋友重叙旧情。可着正式礼服出席。</span></div>
+      <div class="event-meta"><span>📍 <span class="en-inline">Grand Ballroom</span><span class="zh-inline">大宴会厅</span></span> <span>⏰ 6:30 PM</span></div>
+    </div>
+    <div class="event-card">
+      <div class="event-date"><span class="event-date-month">Jul</span><span class="event-date-day">22</span></div>
+      <div class="event-title"><span class="en-inline">Class of 2000 Reunion</span><span class="zh-inline">2000届校友重聚</span></div>
+      <div class="event-body"><span class="en-inline">25-year reunion for the Class of 2000. Relive campus memories and celebrate your classmates' journeys.</span><span class="zh-inline">2000届毕业生25周年重聚。重温校园记忆，共庆同学们的人生旅程。</span></div>
+      <div class="event-meta"><span>📍 <span class="en-inline">Main Campus</span><span class="zh-inline">主校区</span></span> <span>⏰ 10:00 AM</span></div>
+    </div>
+    <div class="event-card">
+      <div class="event-date"><span class="event-date-month">Aug</span><span class="event-date-day">9</span></div>
+      <div class="event-title"><span class="en-inline">Career Networking Evening</span><span class="zh-inline">职场交流之夜</span></div>
+      <div class="event-body"><span class="en-inline">Connect with alumni across industries. Speed networking, keynote speakers, and cocktail reception.</span><span class="zh-inline">与各行各业的校友建立联系。快速交流、主题演讲及鸡尾酒招待会。</span></div>
+      <div class="event-meta"><span>📍 <span class="en-inline">Innovation Hub</span><span class="zh-inline">创新中心</span></span> <span>⏰ 7:00 PM</span></div>
+    </div>
+    <div class="event-card">
+      <div class="event-date"><span class="event-date-month">Sep</span><span class="event-date-day">20</span></div>
+      <div class="event-title"><span class="en-inline">Homecoming Weekend</span><span class="zh-inline">返校周末</span></div>
+      <div class="event-body"><span class="en-inline">Come back to campus for a full weekend of events, sports, campus tours, and faculty meet-and-greets.</span><span class="zh-inline">回到校园，享受丰富的周末活动、体育赛事、校园参观及与师长的叙旧时光。</span></div>
+      <div class="event-meta"><span>📍 <span class="en-inline">Campus Wide</span><span class="zh-inline">全校区</span></span> <span>⏰ All Day</span></div>
+    </div>
+  </div>
+
+  <button class="add-event-btn" onclick="toggleEventForm()">
+    <span class="en-inline">+ Submit an Event</span><span class="zh-inline">+ 提交活动</span>
+  </button>
+
+  <div class="event-form-wrap" id="eventForm">
+    <h3 style="font-family:&#39;Playfair Display&#39;,serif;color:var(--navy);margin-bottom:1.5rem;font-size:1.3rem;">
+      <span class="en-inline">Submit a New Event</span><span class="zh-inline">提交新活动</span>
+    </h3>
+    <div class="form-row">
+      <div class="form-group">
+        <label><span class="en-inline">Event Name</span><span class="zh-inline">活动名称</span></label>
+        <input type="text" id="evtName" placeholder="Annual Reunion...">
+      </div>
+      <div class="form-group">
+        <label><span class="en-inline">Date</span><span class="zh-inline">日期</span></label>
+        <input type="date" id="evtDate">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label><span class="en-inline">Location</span><span class="zh-inline">地点</span></label>
+        <input type="text" id="evtLoc" placeholder="Venue or City...">
+      </div>
+      <div class="form-group">
+        <label><span class="en-inline">Time</span><span class="zh-inline">时间</span></label>
+        <input type="time" id="evtTime">
+      </div>
+    </div>
+    <div class="form-group" style="margin-bottom:1.5rem;">
+      <label><span class="en-inline">Description</span><span class="zh-inline">活动描述</span></label>
+      <textarea id="evtDesc" placeholder="Tell us about this event..."></textarea>
+    </div>
+    <button class="form-submit" onclick="submitEvent()">
+      <span class="en-inline">Submit Event</span><span class="zh-inline">提交活动</span>
+    </button>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section id="shop">
+  <div class="section-tag"><span class="en-inline">Official Merchandise</span><span class="zh-inline">官方周边</span></div>
+  <h2 class="section-title"><span class="en-inline">Alumni T-Shirt Collection</span><span class="zh-inline">校友T恤系列</span></h2>
+  <div class="section-title-zh">代代相传的骄傲</div>
+  <p class="section-sub">
+    <span class="en-inline">Wear your pride. Each shirt is crafted from 100% premium cotton and features embroidered alumni crests. Ships worldwide.</span>
+    <span class="zh-inline">穿出你的骄傲。每件衬衫均采用100%优质棉制作，绣有校友徽章。全球配送。</span>
+  </p>
+
+  <div class="shop-grid">
+    <div class="product-card">
+      <div class="product-img product-img-navy">
+        <span class="product-badge"><span class="en-inline">Best Seller</span><span class="zh-inline">热销款</span></span>
+        👕
+      </div>
+      <div class="product-info">
+        <div class="product-name"><span class="en-inline">Classic Navy Tee</span><span class="zh-inline">经典藏青T恤</span></div>
+        <div class="product-desc"><span class="en-inline">The timeless alumni shirt. Embroidered crest on chest, printed year on back.</span><span class="zh-inline">永恒的校友衬衫。胸前绣有校徽，背后印有毕业年份。</span></div>
+        <div class="product-price">$38</div>
+        <div class="product-controls">
+          <select class="size-select" id="size1">
+            <option><span class="en-inline">Size: S</span></option>
+            <option>S</option><option>M</option><option selected="">L</option><option>XL</option><option>XXL</option>
+          </select>
+          <button class="add-to-cart" onclick="addToCart(&#39;Classic Navy Tee&#39;, &#39;$38&#39;, &#39;👕&#39;, &#39;product-img-navy&#39;)">
+            <span class="en-inline">Add</span><span class="zh-inline">加入</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img product-img-cream">
+        <span class="product-badge"><span class="en-inline">New</span><span class="zh-inline">新品</span></span>
+        👕
+      </div>
+      <div class="product-info">
+        <div class="product-name"><span class="en-inline">Heritage Cream Tee</span><span class="zh-inline">传承奶油T恤</span></div>
+        <div class="product-desc"><span class="en-inline">Vintage-inspired design with gold foil print. Soft-washed for the perfect worn-in feel.</span><span class="zh-inline">复古风格设计，烫金印花。经过水洗处理，呈现完美的自然感。</span></div>
+        <div class="product-price">$42</div>
+        <div class="product-controls">
+          <select class="size-select">
+            <option>S</option><option>M</option><option selected="">L</option><option>XL</option>
+          </select>
+          <button class="add-to-cart" onclick="addToCart(&#39;Heritage Cream Tee&#39;, &#39;$42&#39;, &#39;👕&#39;, &#39;product-img-cream&#39;)">
+            <span class="en-inline">Add</span><span class="zh-inline">加入</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img product-img-gray">
+        👕
+      </div>
+      <div class="product-info">
+        <div class="product-name"><span class="en-inline">Alumni Long Sleeve</span><span class="zh-inline">校友长袖T恤</span></div>
+        <div class="product-desc"><span class="en-inl   ine">Double-needle hem and sleeves, ribbed cuffs. Perfect for cooler evenings at alumni events.</span><span class="zh-inline">双线针缝合底边和袖口，罗纹袖口设计。适合校友活动的凉爽夜晚穿着。</span></div>
+        <div class="product-price">$48</div>
+        <div class="product-controls">
+          <select class="size-select">
+            <option>S</option><option>M</option><option selected="">L</option><option>XL</option><option>XXL</option>
+          </select>
+          <button class="add-to-cart" onclick="addToCart(&#39;Alumni Long Sleeve&#39;, &#39;$48&#39;, &#39;👕&#39;, &#39;product-img-gray&#39;)">
+            <span class="en-inline">Add</span><span class="zh-inline">加入</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background:linear-gradient(135deg,var(--gold) 0%,#8B6914 100%);">
+        <span class="product-badge"><span class="en-inline">Limited</span><span class="zh-inline">限量版</span></span>
+        👕
+      </div>
+      <div class="product-info">
+        <div class="product-name"><span class="en-inline">60th Anniversary Edition</span><span class="zh-inline">60周年纪念版</span></div>
+        <div class="product-desc"><span class="en-inline">Limited edition commemorating 60 years of alumni excellence. Individually numbered. Collector's item.</span><span class="zh-inline">庆祝60年校友卓越成就的限量版。每件独立编号，收藏级别。</span></div>
+        <div class="product-price">$65</div>
+        <div class="product-controls">
+          <select class="size-select">
+            <option>S</option><option>M</option><option selected="">L</option><option>XL</option>
+          </select>
+          <button class="add-to-cart" onclick="addToCart(&#39;60th Anniversary Edition&#39;, &#39;$65&#39;, &#39;👕&#39;, &#39;&#39;)">
+            <span class="en-inline">Add</span><span class="zh-inline">加入</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-tag"><span class="en-inline">Memories</span><span class="zh-inline">珍贵记忆</span></div>
+  <h2 class="section-title"><span class="en-inline">Photo Gallery</span><span class="zh-inline">相册</span></h2>
+  <div class="section-title-zh">记录每一个难忘瞬间</div>
+  <p class="section-sub">
+    <span class="en-inline">Share your alumni moments. Upload photos from events, reunions, or campus visits to our shared gallery.</span>
+    <span class="zh-inline">分享您的校友时光。上传活动、聚会或校园访问的照片到我们的共享相册。</span>
+  </p>
+
+  <div class="gallery-grid" id="galleryGrid">
+    <div class="gallery-item" style="background:#0d2240;"><div class="gallery-placeholder">🎓<div class="ph-label"><span class="en-inline">Graduation</span><span class="zh-inline">毕业典礼</span></div></div></div>
+    <div class="gallery-item" style="background:#1a3a5c;"><div class="gallery-placeholder">🏫<div class="ph-label"><span class="en-inline">Campus</span><span class="zh-inline">校园</span></div></div></div>
+    <div class="gallery-item" style="background:#2c4a6e;"><div class="gallery-placeholder">🤝<div class="ph-label"><span class="en-inline">Reunion</span><span class="zh-inline">重聚</span></div></div></div>
+    <div class="gallery-item" style="background:#c9952a;"><div class="gallery-placeholder">🏆<div class="ph-label"><span class="en-inline">Awards</span><span class="zh-inline">颁奖</span></div></div></div>
+    <div class="gallery-item" style="background:#8B6914;"><div class="gallery-placeholder">🥂<div class="ph-label"><span class="en-inline">Gala</span><span class="zh-inline">晚宴</span></div></div></div>
+    <div class="gallery-item" style="background:#3d5a80;"><div class="gallery-placeholder">📚<div class="ph-label"><span class="en-inline">Library</span><span class="zh-inline">图书馆</span></div></div></div>
+  </div>
+
+  <div class="gallery-upload-zone" id="uploadZone" onclick="document.getElementById(&#39;photo-input&#39;).click()" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+    <div class="upload-icon">📸</div>
+    <div class="upload-text">
+      <strong><span class="en-inline">Click to upload photos</span><span class="zh-inline">点击上传照片</span></strong>
+      <br>
+      <span class="en-inline">or drag and drop · JPG, PNG up to 10MB</span>
+      <span class="zh-inline">或拖放图片 · 支持 JPG、PNG，最大 10MB</span>
+    </div>
+  </div>
+  <input type="file" id="photo-input" accept="image/*" multiple="" onchange="handlePhotoUpload(event)">
+  <p class="gallery-caption" id="galleryCaption"></p>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter">
+  <div class="nl-pattern"></div>
+  <div class="nl-content">
+    <div class="section-tag"><span class="en-inline">Stay Informed</span><span class="zh-inline">保持联系</span></div>
+    <h2 class="section-title"><span class="en-inline">The Alumni Newsletter</span><span class="zh-inline">校友通讯</span></h2>
+    <div class="section-title-zh">Stay Connected · 保持联系</div>
+    <p class="section-sub">
+      <span class="en-inline">Stories, achievements, event previews, and exclusive updates — delivered quarterly to your inbox. Join over 8,000 alumni subscribers.</span>
+      <span class="zh-inline">故事、成就、活动预告和独家消息——每季度送达您的邮箱。加入超过8,000名校友订阅者的行列。</span>
+    </p>
+    <div class="nl-form">
+      <input type="email" class="nl-input" id="nlEmail" placeholder="your@email.com">
+      <button class="nl-submit" onclick="subscribeNewsletter()">
+        <span class="en-inline">Subscribe</span><span class="zh-inline">订阅</span>
+      </button>
+    </div>
+    <p class="nl-success" id="nlSuccess">
+      <span class="en-inline">✓ Welcome aboard! You'll receive our next issue shortly.</span>
+      <span class="zh-inline">✓ 欢迎加入！您将很快收到我们的下一期通讯。</span>
+    </p>
+
+    <div class="nl-archive">
+      <div class="nl-issue">
+        <div class="nl-issue-vol">Vol. 24 · Issue 1</div>
+        <div class="nl-issue-title"><span class="en-inline">Spring 2025</span><span class="zh-inline">2025年春季</span></div>
+        <div class="nl-issue-date"><span class="en-inline">March 2025</span><span class="zh-inline">2025年3月</span></div>
+        <div class="nl-issue-tag"><span class="en-inline">Latest Issue</span><span class="zh-inline">最新一期</span></div>
+      </div>
+      <div class="nl-issue">
+        <div class="nl-issue-vol">Vol. 23 · Issue 4</div>
+        <div class="nl-issue-title"><span class="en-inline">Winter 2024</span><span class="zh-inline">2024年冬季</span></div>
+        <div class="nl-issue-date"><span class="en-inline">December 2024</span><span class="zh-inline">2024年12月</span></div>
+        <div class="nl-issue-tag"><span class="en-inline">Read Now</span><span class="zh-inline">立即阅读</span></div>
+      </div>
+      <div class="nl-issue">
+        <div class="nl-issue-vol">Vol. 23 · Issue 3</div>
+        <div class="nl-issue-title"><span class="en-inline">Fall 2024</span><span class="zh-inline">2024年秋季</span></div>
+        <div class="nl-issue-date"><span class="en-inline">September 2024</span><span class="zh-inline">2024年9月</span></div>
+        <div class="nl-issue-tag"><span class="en-inline">Read Now</span><span class="zh-inline">立即阅读</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">Alumni Association<br><span style="font-family:&#39;Noto Serif SC&#39;,serif;font-size:0.9rem;color:rgba(201,149,42,0.7);">校友会</span></div>
+    <p class="footer-text"><span class="en-inline">Dedicated to fostering lifelong connections and celebrating the achievements of our distinguished alumni community since 1965.</span><span class="zh-inline">自1965年起，致力于建立终身联系，庆祝我们杰出校友社区的成就。</span></p>
+  </div>
+  <div>
+    <p class="footer-heading"><span class="en-inline">Quick Links</span><span class="zh-inline">快速链接</span></p>
+    <ul class="footer-links">
+      <li><a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#events"><span class="en-inline">Upcoming Events</span><span class="zh-inline">即将举行的活动</span></a></li>
+      <li><a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#shop"><span class="en-inline">Merchandise Shop</span><span class="zh-inline">周边商店</span></a></li>
+      <li><a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#gallery"><span class="en-inline">Photo Gallery</span><span class="zh-inline">相册</span></a></li>
+      <li><a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#newsletter"><span class="en-inline">Newsletter Archive</span><span class="zh-inline">通讯存档</span></a></li>
+    </ul>
+  </div>
+  <div>
+    <p class="footer-heading"><span class="en-inline">Contact</span><span class="zh-inline">联系我们</span></p>
+    <ul class="footer-links">
+      <li><a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#">alumni@university.edu</a></li>
+      <li><a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#"><span class="en-inline">+1 (555) 012-3456</span></a></li>
+      <li><a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#"><span class="en-inline">123 Campus Drive</span><span class="zh-inline">校园大道123号</span></a></li>
+      <li><a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#"><span class="en-inline">Alumni Portal Login</span><span class="zh-inline">校友门户登录</span></a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Alumni Association. <span class="en-inline">All rights reserved.</span><span class="zh-inline">版权所有。</span></span>
+    <span><a href="file:///Users/dannykuei/Downloads/alumni-association%202.html#" style="color:rgba(255,255,255,0.3);text-decoration:none;margin-left:1.5rem;"><span class="en-inline">Privacy Policy</span><span class="zh-inline">隐私政策</span></a></span>
+  </div>
+</footer>
+
+<!-- CART MODAL -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCartOnOverlay(event)">
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h3><span class="en-inline">Your Cart</span><span class="zh-inline">购物车</span></h3>
+      <button class="cart-close" onclick="toggleCart()">✕</button>
+    </div>
+    <div id="cartItems"><p class="cart-empty"><span class="en-inline">Your cart is empty</span><span class="zh-inline">购物车为空</span></p></div>
+    <div class="cart-total" id="cartTotal" style="display:none;">
+      <span><span class="en-inline">Total</span><span class="zh-inline">总计</span></span>
+      <span id="totalAmount">$0</span>
+    </div>
+    <button class="checkout-btn" id="checkoutBtn" style="display:none;" onclick="checkout()">
+      <span class="en-inline">Proceed to Checkout →</span><span class="zh-inline">前往结账 →</span>
+    </button>
+  </div>
+</div>
+
+<!-- NOTIFICATION -->
+<div class="notif" id="notif"></div>
+
+<script>
+  let lang = 'en';
+  let cart = [];
+  let cartCount = 0;
+
+  function toggleLang() {
+    lang = lang === 'en' ? 'zh' : 'en';
+    document.body.classList.toggle('zh-mode');
+    document.getElementById('langBtn').textContent = lang === 'en' ? '中文' : 'English';
+  }
+
+  function showNotif(msg) {
+    const n = document.getElementById('notif');
+    n.textContent = msg;
+    n.classList.add('show');
+    setTimeout(() => n.classList.remove('show'), 3000);
+  }
+
+  function addToCart(name, price, icon, bg) {
+    const existing = cart.find(i => i.name === name);
+    if (existing) {
+      existing.qty++;
+    } else {
+      cart.push({ name, price, icon, bg, qty: 1 });
+    }
+    updateCartUI();
+    showNotif(lang === 'en' ? `✓ ${name} added to cart` : `✓ ${name} 已加入购物车`);
+  }
+
+  function updateCartUI() {
+    const total = cart.reduce((s, i) => s + parseInt(i.price.replace('$','')) * i.qty, 0);
+    const badge = document.getElementById('cartBadge');
+    const count = cart.reduce((s,i) => s+i.qty, 0);
+    badge.textContent = count;
+    badge.style.display = count > 0 ? 'flex' : 'none';
+
+    const itemsEl = document.getElementById('cartItems');
+    const totalEl = document.getElementById('cartTotal');
+    const checkoutEl = document.getElementById('checkoutBtn');
+    const totalAmtEl = document.getElementById('totalAmount');
+
+    if (cart.length === 0) {
+      itemsEl.innerHTML = `<p class="cart-empty"><span class="en-inline">Your cart is empty</span><span class="zh-inline">购物车为空</span></p>`;
+      totalEl.style.display = 'none';
+      checkoutEl.style.display = 'none';
+    } else {
+      itemsEl.innerHTML = cart.map((item, i) => `
+        <div class="cart-item">
+          <div class="cart-item-icon ${item.bg}">${item.icon}</div>
+          <div class="cart-item-details">
+            <div class="cart-item-name">${item.name}</div>
+            <div class="cart-item-meta">Qty: ${item.qty}</div>
+            <div class="cart-item-price">${item.price}</div>
+          </div>
+          <button class="cart-remove" onclick="removeFromCart(${i})">✕</button>
+        </div>
+      `).join('');
+      totalEl.style.display = 'flex';
+      checkoutEl.style.display = 'block';
+      totalAmtEl.textContent = `$${total}`;
+    }
+
+    if (document.body.classList.contains('zh-mode')) {
+      document.querySelectorAll('.en-inline').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.zh-inline').forEach(el => el.style.display = 'inline');
+    }
+  }
+
+  function removeFromCart(i) {
+    cart.splice(i, 1);
+    updateCartUI();
+  }
+
+  function toggleCart() {
+    document.getElementById('cartOverlay').classList.toggle('open');
+  }
+
+  function closeCartOnOverlay(e) {
+    if (e.target === document.getElementById('cartOverlay')) toggleCart();
+  }
+
+  function checkout() {
+    showNotif(lang === 'en' ? '✓ Redirecting to checkout...' : '✓ 正在跳转到结账页面...');
+    cart = [];
+    updateCartUI();
+    toggleCart();
+  }
+
+  function toggleEventForm() {
+    document.getElementById('eventForm').classList.toggle('open');
+  }
+
+  function submitEvent() {
+    const name = document.getElementById('evtName').value;
+    const date = document.getElementById('evtDate').value;
+    const loc = document.getElementById('evtLoc').value;
+    const desc = document.getElementById('evtDesc').value;
+    if (!name || !date) {
+      showNotif(lang === 'en' ? 'Please fill in event name and date' : '请填写活动名称和日期');
+      return;
+    }
+    const d = new Date(date + 'T00:00:00');
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const monthsZh = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+    const card = document.createElement('div');
+    card.className = 'event-card';
+    card.innerHTML = `
+      <div class="event-date">
+        <span class="event-date-month">${months[d.getMonth()]}</span>
+        <span class="event-date-day">${d.getDate()}</span>
+      </div>
+      <div class="event-title">${name}</div>
+      <div class="event-body">${desc || (lang === 'en' ? 'More details coming soon.' : '详情即将公布。')}</div>
+      <div class="event-meta"><span>📍 ${loc || (lang === 'en' ? 'TBD' : '待定')}</span></div>
+    `;
+    document.getElementById('eventsGrid').appendChild(card);
+    document.getElementById('evtName').value = '';
+    document.getElementById('evtDate').value = '';
+    document.getElementById('evtLoc').value = '';
+    document.getElementById('evtDesc').value = '';
+    document.getElementById('eventForm').classList.remove('open');
+    showNotif(lang === 'en' ? '✓ Event submitted successfully!' : '✓ 活动提交成功！');
+  }
+
+  function handlePhotoUpload(e) {
+    const files = Array.from(e.target.files);
+    files.forEach(file => addPhotoToGallery(file));
+  }
+
+  function handleDragOver(e) {
+    e.preventDefault();
+    document.getElementById('uploadZone').classList.add('dragover');
+  }
+
+  function handleDragLeave(e) {
+    document.getElementById('uploadZone').classList.remove('dragover');
+  }
+
+  function handleDrop(e) {
+    e.preventDefault();
+    document.getElementById('uploadZone').classList.remove('dragover');
+    const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/'));
+    files.forEach(file => addPhotoToGallery(file));
+  }
+
+  function addPhotoToGallery(file) {
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+      const item = document.createElement('div');
+      item.className = 'gallery-item';
+      item.innerHTML = `<img src="${ev.target.result}" alt="${file.name}" loading="lazy">`;
+      document.getElementById('galleryGrid').prepend(item);
+      const caption = document.getElementById('galleryCaption');
+      caption.textContent = lang === 'en'
+        ? `✓ "${file.name}" uploaded successfully`
+        : `✓ "${file.name}" 上传成功`;
+      showNotif(lang === 'en' ? `✓ Photo uploaded!` : '✓ 照片上传成功！');
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function subscribeNewsletter() {
+    const email = document.getElementById('nlEmail').value;
+    if (!email || !email.includes('@')) {
+      showNotif(lang === 'en' ? 'Please enter a valid email address' : '请输入有效的电子邮件地址');
+      return;
+    }
+    document.getElementById('nlSuccess').style.display = 'block';
+    document.getElementById('nlEmail').value = '';
+    showNotif(lang === 'en' ? `✓ Subscribed successfully!` : '✓ 订阅成功！');
+  }
+</script>
+
+
+</body></html>
