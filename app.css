@@ -742,8 +742,8 @@ footer {
 .event-detail-image {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  aspect-ratio: 1;
+  object-fit: contain;
 }
 .event-detail-image--flyer {
   aspect-ratio: auto;
@@ -754,6 +754,11 @@ footer {
   margin-top: 0;
   font-size: clamp(24px, 2.4vw, 36px);
   line-height: 1.08;
+}
+.event-speaker {
+  margin: 16px 0 0;
+  font-size: 16px;
+  line-height: 1.5;
 }
 .event-detail-facts {
   display: grid;
@@ -773,6 +778,12 @@ footer {
 .event-detail-facts dd {
   margin: 0;
   font-size: 16px;
+  line-height: 1.5;
+}
+.event-organized-by {
+  margin: 0;
+  padding-top: 40px;
+  font-size: 18px;
   line-height: 1.5;
 }
 .event-detail-description {
@@ -1241,6 +1252,9 @@ footer {
     height: 190px;
   }
   .home-event-image--groups {
+    height: auto;
+  }
+  .home-event-image--poster {
     height: auto;
   }
   .home-event-details {
