@@ -1008,8 +1008,14 @@ body.zh-mode .event-detail-image.zh {
 
 @media (min-width: 1180px) {
   .team-group--others .team-panel {
-    grid-template-columns: repeat(4, minmax(0, 220px));
-    gap: 48px 40px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 48px 24px;
+  }
+
+  .team-group--others .team-member {
+    width: 100%;
+    max-width: 220px;
+    justify-self: center;
   }
 }
 
