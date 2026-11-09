@@ -739,6 +739,24 @@ footer {
   display: grid;
   gap: 18px;
 }
+.event-video-list {
+  display: grid;
+  gap: 18px;
+}
+.event-video-list figure {
+  margin: 0;
+}
+.event-video-list iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+.event-video-list figcaption {
+  margin-top: 8px;
+  color: var(--navy);
+  font: 500 15px/1.4 var(--site-font);
+}
 .event-detail-image {
   display: block;
   width: 100%;
